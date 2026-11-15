@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CampusBite | Food Ordering</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <h1>Campus<span>Bite</span></h1>
+      <span class="cart-pill">Cart: <strong id="cartCount">0</strong> items</span>
+    </div>
+  </header>
+
+  <main class="container layout">
+    <!-- Menu Section -->
+    <section>
+      <div class="section-head">
+        <h2>Today's Menu</h2>
+        <div class="filter-tabs" id="categoryTabs">
+          <button class="active" data-cat="All">All</button>
+          <button data-cat="Meals">Meals</button>
+          <button data-cat="Snacks">Snacks</button>
+          <button data-cat="Drinks">Drinks</button>
+        </div>
+      </div>
+      <div id="menuGrid" class="menu-grid"></div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <aside class="cart-panel">
+      <h2>Your Order</h2>
+      <div id="cartItems" class="cart-items">
+        <p class="empty">Your cart is empty.</p>
+      </div>
+
+      <div class="bill-box">
+        <div class="bill-row"><span>Subtotal</span><span id="subtotal">₹0</span></div>
+        <div class="bill-row"><span>Packaging Fee</span><span id="packFee">₹0</span></div>
+        <div class="bill-row total"><span>Total Payable</span><span id="grandTotal">₹0</span></div>
+      </div>
+
+      <button id="checkoutBtn" class="checkout-btn" disabled>Place Order</button>
+      <p id="orderSuccess" class="order-success hidden"></p>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
